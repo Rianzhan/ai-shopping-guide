@@ -1,0 +1,11 @@
+# 复制本文件为 .dev.vars 并填入你自己的真实值（本地开发用）
+# 注意：.dev.vars 已被 .gitignore 排除，永远不会被提交到 GitHub。
+# 线上部署时请使用：wrangler pages secret put <KEY> --project-name=<你的项目>
+
+COZE_API_TOKEN=your_coze_api_token_here
+COZE_PROJECT_ID=your_coze_project_id_here
+
+# ---- 飞书渠道（可选，不接飞书可留空）----
+FEISHU_APP_ID=your_feishu_app_id
+FEISHU_APP_SECRET=your_feishu_app_secret
+FEISHU_ENCRYPT_KEY=your_encrypt_key_if_enabled

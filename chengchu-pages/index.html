@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f4ed">
+  <meta name="description" content="澄初个人护理：护理不必从被说服开始。从肤感、香味到预算，把每一项选择说清楚。">
+  <title>澄初 CHENGCHU | 护理不必从被说服开始</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f6f4ed'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%236f806e' stroke-width='3'/%3E%3Cpath d='M19 36c8 5 18 5 26-2' fill='none' stroke='%232b302d' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root{--paper:#f6f4ed;--paper-2:#eeefe8;--paper-3:#e3e9df;--ink:#2a302d;--muted:#5d665e;--sage:#71816f;--line:#d6d9d0;--white:#fcfbf7;--ease:cubic-bezier(.23,1,.32,1)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",system-ui,sans-serif;font-size:16px;line-height:1.65}
+    button,input{font:inherit}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button{cursor:pointer}
+    :focus-visible{outline:2px solid #536d55;outline-offset:3px}
+    .container{width:min(100% - 72px,1320px);margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(246,244,237,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .header-inner{height:76px;display:flex;align-items:center;gap:40px}
+    .brand{display:inline-flex;align-items:baseline;gap:11px;white-space:nowrap;line-height:1}
+    .brand strong{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:26px;font-weight:600;letter-spacing:.06em}
+    .brand span{font-size:11px;letter-spacing:.19em;color:var(--sage);font-weight:700}
+    .nav{margin-left:auto;display:flex;align-items:center;gap:35px}
+    .nav a{font-size:14px;position:relative;white-space:nowrap}
+    .nav a:not(.header-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;background:var(--ink);transition:right .22s var(--ease)}
+    .nav a:not(.header-cta):hover::after{right:0}
+    .header-cta{padding:10px 17px;border:1px solid var(--ink);transition:background .2s,color .2s}
+    .header-cta:hover{background:var(--ink);color:var(--white)}
+    .menu-toggle{display:none;margin-left:auto;border:0;background:transparent;padding:10px;color:var(--ink);font-size:14px}
+    .hero{display:grid;grid-template-columns:minmax(0,.89fr) minmax(0,1.11fr);min-height:690px;align-items:center;padding-block:66px 84px;gap:clamp(40px,5vw,80px)}
+    .hero-copy{padding-bottom:18px}
+    .hero-kicker{font-size:12px;letter-spacing:.22em;color:var(--sage);font-weight:700;margin:0 0 27px}
+    h1,h2,h3,p{margin-top:0}
+    h1,.serif{font-family:"Noto Serif CJK SC","Songti SC","SimSun",serif}
+    h1{font-size:clamp(50px,5.1vw,82px);font-weight:500;letter-spacing:-.025em;line-height:1.27;margin-bottom:32px;text-wrap:balance}
+    h1 span{display:block}
+    .hero-lead{font-size:18px;line-height:1.95;color:#4c564e;max-width:29em;margin-bottom:34px;text-wrap:pretty}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--ink);font-size:14px;font-weight:600;transition:transform .2s var(--ease),background .2s,color .2s}
+    .button:active,.chip:active,.product-card:active{transform:scale(.97)}
+    .button-primary{background:var(--ink);color:var(--white)}
+    .button-primary:hover{background:#455148}
+    .button-secondary{background:transparent;color:var(--ink)}
+    .button-secondary:hover{background:var(--paper-2)}
+    .hero-trust{display:flex;gap:11px;align-items:center;color:var(--muted);font-size:12px;letter-spacing:.03em;flex-wrap:wrap}
+    .hero-trust span+span::before{content:"/";margin-right:11px;color:#9aa79a}
+    .hero-image{position:relative;align-self:stretch;min-height:530px;margin:0;background:#ebe6dc;overflow:hidden}
+    .hero-image img{width:100%;height:100%;object-fit:cover;object-position:59% center}
+    .attitude{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:112px 116px}
+    .attitude-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:start}
+    .section-label{font-size:14px;color:var(--sage);font-weight:650;letter-spacing:.07em;margin:7px 0 0}
+    .attitude h2{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:clamp(32px,3.4vw,53px);line-height:1.42;letter-spacing:-.02em;font-weight:500;margin:0 0 26px;text-wrap:balance}
+    .attitude p:last-child{max-width:38em;color:var(--muted);margin:0}
+    .section{padding-block:112px}
+    .section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:43px}
+    .section-heading h2{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:clamp(34px,3.25vw,50px);font-weight:500;line-height:1.3;margin:0}
+    .section-heading p{max-width:29em;color:var(--muted);margin:0}
+    .products-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .product-card{position:relative;display:flex;flex-direction:column;text-align:left;min-height:390px;padding:26px;border:0;background:#eaece5;color:var(--ink);transition:transform .24s var(--ease),background .24s var(--ease)}
+    .product-card:nth-child(2){background:#e5e9e1}.product-card:nth-child(3){background:#ebe9e3}.product-card:nth-child(4){background:#e3e8e3}
+    .product-card:hover{transform:translateY(-5px);background:#dfe7dc}
+    .product-category{font-size:13px;color:#526554;letter-spacing:.08em}
+    .product-glyph{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:clamp(86px,10vw,150px);font-weight:400;line-height:1;color:rgba(98,122,97,.18);margin:auto 0;text-align:center}
+    .product-card h3{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:23px;font-weight:500;line-height:1.42;margin:0 0 10px}
+    .product-card p{font-size:13px;color:#566058;margin:0 0 14px}
+    .card-action{font-size:13px;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:2px}
+    .principles{background:var(--paper-2)}
+    .principles-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:90px}
+    .principles-intro h2{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:clamp(34px,3.1vw,48px);font-weight:500;line-height:1.38;margin:0 0 18px}
+    .principles-intro p{color:var(--muted);max-width:22em}
+    .principle-list{list-style:none;padding:0;margin:0}
+    .principle-list li{display:grid;grid-template-columns:30px 1fr;gap:22px;padding:28px 0;border-top:1px solid #cbd3c7}
+    .principle-list li:last-child{border-bottom:1px solid #cbd3c7}
+    .principle-mark{font-family:Georgia,serif;font-size:24px;color:var(--sage);line-height:1.2}
+    .principle-list h3{font-size:20px;font-weight:600;margin:0 0 8px}
+    .principle-list p{color:var(--muted);margin:0;max-width:32em}
+    .guide{padding-block:116px 120px}
+    .guide-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(38px,7vw,112px);align-items:start}
+    .guide-copy{padding-top:24px}
+    .guide-copy h2{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:clamp(35px,3.4vw,53px);font-weight:500;line-height:1.35;max-width:9em;margin:19px 0 25px}
+    .guide-copy>p{color:var(--muted);font-size:17px;line-height:1.9;max-width:25em}
+    .guide-example{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:19px!important;color:#536354!important;line-height:1.7!important}
+    #coze-agent-container{min-height:520px}
+    .chat{background:var(--white);border:1px solid #ced4ca;min-height:520px;display:flex;flex-direction:column}
+    .chat-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line);gap:20px}
+    .chat-header strong{display:block;font-size:16px}.chat-header small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .chat-messages{padding:27px 24px;display:flex;flex-direction:column;gap:16px;flex:1;max-height:340px;overflow:auto;scrollbar-color:#bdc8ba transparent}
+    .message{max-width:88%;padding:15px 18px;font-size:14px;line-height:1.7;white-space:pre-line}
+    .message.agent{align-self:flex-start;background:#e9eee8}
+    .message.user{align-self:flex-end;background:#38483d;color:#f8f8f4}
+    .chat-start{padding:0 24px 21px}
+    .chat-start p{font-size:12px;color:var(--muted);margin:0 0 10px}
+    .quick-questions{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{border:1px solid #b7c4b4;background:transparent;color:#3f5741;border-radius:100px;padding:7px 13px;font-size:12px;transition:background .2s,transform .2s var(--ease)}
+    .chip:hover{background:#eaf0e8}
+    .chat-form{display:flex;gap:9px;padding:15px 20px;border-top:1px solid var(--line)}
+    .chat-form label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    .chat-form input{min-width:0;flex:1;border:1px solid #cbd4c9;background:#fff;padding:12px 14px;color:var(--ink);font-size:14px}
+    .chat-form input::placeholder{color:#69756c;opacity:1}
+    .chat-form button{border:0;background:var(--ink);color:var(--white);padding:0 20px;font-size:14px}
+    .chat-form button:hover{background:#475a4b}
+    .chat-form button:disabled{opacity:.55;cursor:not-allowed}
+    .chat-new{border:1px solid #b7c4b4;background:transparent;color:#3f5741;border-radius:100px;padding:6px 13px;font-size:12px;white-space:nowrap;transition:background .2s}
+    .chat-new:hover{background:#eaf0e8}
+    .chat-retry{border:1px solid #b7c4b4;background:transparent;color:#3f5741;border-radius:100px;padding:5px 12px;font-size:12px;margin-top:9px;display:block}
+    .chat-retry:hover{background:#eaf0e8}
+    .prompts{background:var(--paper-3);padding-block:78px 86px}
+    .prompts-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}
+    .prompts h2{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:clamp(32px,3vw,45px);font-weight:500;margin:0}
+    .prompt-list{display:flex;flex-wrap:wrap;gap:12px;align-content:start}
+    .prompt-list button{border:1px solid #a9b8a8;background:transparent;color:var(--ink);padding:12px 18px;min-height:46px;text-align:left;font-size:14px;transition:background .2s,transform .2s var(--ease)}
+    .prompt-list button:hover{background:#f3f5f0}.prompt-list button:active{transform:scale(.98)}
+    .site-footer{border-top:1px solid var(--line);padding-block:42px 55px}
+    .footer-boundary{display:grid;grid-template-columns:1fr 2fr;gap:35px;padding-bottom:34px;margin-bottom:42px;border-bottom:1px solid var(--line)}
+    .footer-boundary strong{font-size:13px;color:var(--sage);font-weight:650}
+    .footer-boundary p{font-size:13px;color:var(--muted);line-height:1.8;max-width:63em;margin:0}
+    .footer-inner{display:grid;grid-template-columns:1fr auto 1fr;gap:35px;align-items:start}
+    .footer-inner .brand{margin-top:3px}
+    .footer-links{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;color:#4b594e}
+    .footer-links a:hover{text-decoration:underline;text-underline-offset:4px}
+    .footer-note{text-align:right;color:var(--muted);font-size:12px;margin:0}
+    .footer-disclaimer{font-size:12px;color:var(--muted);margin:34px 0 0}
+    dialog{border:0;padding:0;max-width:min(640px,calc(100vw - 32px));width:100%;background:var(--white);color:var(--ink);box-shadow:0 18px 70px rgba(35,44,36,.18)}
+    dialog::backdrop{background:rgba(33,41,35,.46)}
+    .dialog-inner{padding:36px 40px 39px}
+    .dialog-top{display:flex;justify-content:space-between;gap:20px;align-items:start}
+    .dialog-close{border:0;background:transparent;color:var(--ink);font-size:27px;line-height:1;min-width:44px;min-height:44px}
+    .dialog-kicker{font-size:12px;color:var(--sage);letter-spacing:.15em;margin-bottom:14px}
+    .dialog-inner h2{font-family:"Noto Serif CJK SC","Songti SC",serif;font-size:31px;font-weight:500;line-height:1.35;margin:0 0 20px}
+    .dialog-inner p{color:var(--muted);margin:0 0 18px}
+    .dialog-products{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+    .dialog-products li{padding:17px 0;border-bottom:1px solid var(--line)}
+    .dialog-products strong{display:block;font-weight:600}.dialog-products span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+    .dialog-foot{margin-top:27px;font-size:12px!important}
+    @media(max-width:1050px){.container{width:min(100% - 52px,1320px)}.hero{grid-template-columns:1fr 1fr;min-height:600px;gap:32px}.hero-image{min-height:470px}.products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card{min-height:320px}.principles-layout{gap:45px}.guide-layout{gap:40px}.footer-inner{grid-template-columns:1fr 1fr}.footer-note{text-align:left}}
+    @media(max-width:760px){.container{width:min(100% - 36px,1320px)}.header-inner{height:66px}.brand strong{font-size:23px}.menu-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:66px;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 18px 22px;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:12px;font-size:15px}.nav .header-cta{text-align:center;margin-top:8px}.hero{display:flex;flex-direction:column;min-height:0;padding-block:56px 64px;gap:43px}.hero-copy{padding:0;width:100%}h1{font-size:clamp(45px,10vw,64px);margin-bottom:22px}.hero-lead{font-size:16px;margin-bottom:26px}.hero-image{min-height:0;width:100%;aspect-ratio:4/3;margin:0}.attitude{padding-block:72px}.attitude-inner,.principles-layout,.guide-layout,.prompts-layout,.footer-boundary{grid-template-columns:1fr;gap:26px}.section{padding-block:76px}.section-heading{display:block;margin-bottom:30px}.section-heading p{margin-top:14px}.product-card{min-height:290px}.product-glyph{font-size:105px}.principles-intro p{max-width:36em}.guide{padding-block:80px}.guide-copy{padding-top:0}.guide-copy h2{max-width:none;margin-top:11px}.guide-example{margin:26px 0 10px}.chat{min-height:500px}#coze-agent-container{min-height:500px}.prompts{padding-block:62px}.footer-inner{grid-template-columns:1fr;gap:25px}.footer-note{text-align:left}}
+    @media(max-width:520px){.hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.button{padding:0 11px;font-size:13px;text-align:center}.hero-trust{gap:4px;font-size:11px}.hero-trust span+span::before{margin-right:4px}.hero-image{aspect-ratio:1/1}.hero-image img{object-position:62% center}.products-grid{grid-template-columns:1fr 1fr;gap:9px}.product-card{min-height:270px;padding:16px}.product-card h3{font-size:19px}.product-card p{font-size:12px}.product-glyph{font-size:82px}.chat-header{padding:17px}.chat-messages{padding:19px 17px}.chat-start{padding:0 17px 17px}.chat-form{padding:12px;gap:6px}.chat-form button{padding:0 13px}.message{max-width:96%}.dialog-inner{padding:24px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="澄初，返回首页"><strong>澄初</strong><span>CHENGCHU</span></a>
+      <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">菜单</button>
+      <nav class="nav" id="main-nav" aria-label="主导航">
+        <a href="#products">产品</a><a href="#principles">护理指南</a><a href="#guide">AI 金牌导购</a><a href="#about">关于澄初</a><a class="header-cta" href="#guide">问问导购</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="container hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker">CHENGCHU · GUIDED CARE</p>
+        <h1 id="hero-title"><span>护理不必从</span><span>被说服开始</span></h1>
+        <p class="hero-lead">从肤感、香味到预算，把每一项选择说清楚，再决定什么值得买。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#guide">问问 AI 金牌导购</a><a class="button button-secondary" href="#products">浏览产品</a></div>
+        <div class="hero-trust"><span>依据品牌资料</span><span>不夸大</span><span>不强推</span></div>
+      </div>
+      <figure class="hero-image"><img src="chengchu-hero-branded.png" alt="印有澄初品牌标识的洁面、乳液与精华瓶器静物" width="1536" height="1024"></figure>
+    </section>
+    <section class="guide container" id="guide" aria-labelledby="guide-title"><div class="guide-layout"><div class="guide-copy"><p class="section-label">护理建议，从对话开始</p><h2 id="guide-title">问问澄初<br>AI 金牌导购</h2><p>不用把情况一次说完整。想买什么、预算多少、介不介意香味，想到哪儿说到哪儿～我都会帮你选到最合适的。</p><p class="guide-example">“想找一支洗完不容易紧绷的洁面。”</p></div><div id="coze-agent-container" class="chat-embed" aria-label="澄初 AI 导购对话区"></div></div></section>
+    <section class="section container" id="products" aria-labelledby="products-title"><div class="section-heading"><h2 id="products-title">按需要，慢慢选。</h2><p>从真实使用场景出发，先看你需要哪一类，再了解具体产品。</p></div><div class="products-grid">
+      <button class="product-card" type="button" data-category="cleanser"><span class="product-category">洁面 / CLEANSING</span><span class="product-glyph" aria-hidden="true">净</span><h3>从温和清洁开始</h3><p>舒润与清爽，两种不同的使用偏好。</p><span class="card-action">查看洁面产品</span></button>
+      <button class="product-card" type="button" data-category="moisture"><span class="product-category">保湿 / MOISTURE</span><span class="product-glyph" aria-hidden="true">润</span><h3>给日常留一份滋润</h3><p>一款保湿乳，先看是否适合你的习惯。</p><span class="card-action">查看保湿产品</span></button>
+      <button class="product-card" type="button" data-category="serum"><span class="product-category">精华 / SERUM</span><span class="product-glyph" aria-hidden="true">简</span><h3>认真对待进阶护理</h3><p>了解产品信息，再决定是否加入流程。</p><span class="card-action">查看精华产品</span></button>
+      <button class="product-card" type="button" data-category="travel"><span class="product-category">随行 / TRAVEL</span><span class="product-glyph" aria-hidden="true">行</span><h3>把熟悉的护理带走</h3><p>为出差与短途旅行准备。</p><span class="card-action">查看随行产品</span></button>
+    </div></section>
+    <section class="attitude" id="about" aria-labelledby="attitude-title"><div class="container attitude-inner"><p class="section-label">澄初的态度</p><div><h2 id="attitude-title">清楚知道自己在买什么，<br>比被说服更重要。</h2><p>我们更在意适配、预算与使用边界。护理可以是一件日常的小事，不需要靠夸大的承诺才能成立。</p></div></div></section>
+    <section class="section principles" id="principles" aria-labelledby="principles-title"><div class="container principles-layout"><div class="principles-intro"><h2 id="principles-title">为什么可以<br>信任这份建议</h2><p>好的导购，先说清楚它知道什么，也说清楚它不知道什么。</p></div><ol class="principle-list"><li><span class="principle-mark" aria-hidden="true">Ⅰ</span><div><h3>只依据品牌资料推荐</h3><p>不会凭空补写产品功效，也不会把未写明的政策当作事实。</p></div></li><li><span class="principle-mark" aria-hidden="true">Ⅱ</span><div><h3>不知道，就明确说明</h3><p>促销、赠品、库存、售后等信息没有依据时，会建议向门店或系统确认。</p></div></li><li><span class="principle-mark" aria-hidden="true">Ⅲ</span><div><h3>不制造焦虑，不强推</h3><p>推荐的目的，是帮助你缩小选择，而不是增加购物车里的件数。</p></div></li></ol></div></section>
+    <section class="prompts" aria-labelledby="prompts-title"><div class="container prompts-layout"><h2 id="prompts-title">你可以这样开始</h2><div class="prompt-list"><button type="button" data-prompt="想找一支洗完不容易紧绷的洁面。">想找一支洗完不容易紧绷的洁面。</button><button type="button" data-prompt="预算 200，而且我不喜欢香味。">预算 200，而且我不喜欢香味。</button><button type="button" data-prompt="最近皮肤有点刺痛，不知道该不该买精华。">最近皮肤有点刺痛，不知道该不该买精华。</button><button type="button" data-prompt="出差想带一套熟悉的护理。">出差想带一套熟悉的护理。</button><button type="button" data-prompt="网上更便宜，你们会补差价吗？">网上更便宜，你们会补差价吗？</button><button type="button" data-prompt="保湿乳和精华，我需要先买哪一个？">保湿乳和精华，我需要先买哪一个？</button></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-boundary"><strong>关于建议的边界</strong><p>澄初导购依据当前品牌资料提供建议。未明确说明的促销、库存、赠品、售后及渠道政策，请以门店或正式系统信息为准。身体不适时，请咨询专业医生。</p></div><div class="footer-inner"><a class="brand" href="#top" aria-label="澄初，返回首页"><strong>澄初</strong><span>CHENGCHU</span></a><nav class="footer-links" aria-label="页脚导航"><a href="#products">产品</a><a href="#principles">护理指南</a><a href="#guide">AI 导购</a><a href="#about">品牌说明</a></nav><p class="footer-note">CARE, WITH CLARITY<br>少一点推销，多一点适合</p></div><p class="footer-disclaimer">本页为虚构品牌演示。产品资料与价格为示例；AI 导购由 Coze 智能体提供支持。</p></div></footer>
+  <dialog id="product-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><div class="dialog-top"><div><p class="dialog-kicker" id="dialog-kicker"></p><h2 id="dialog-title"></h2></div><button class="dialog-close" type="button" aria-label="关闭产品详情">×</button></div><p id="dialog-description"></p><ul class="dialog-products" id="dialog-products"></ul><p class="dialog-foot">具体成分、规格与使用方法，请以正式产品资料为准。</p></div></dialog>
+  <!-- 聊天适配层 chengchu-coze-adapter.js：经 /api/chat 由 Cloudflare Functions 服务端调用 Coze Agent API，前端无任何凭证。 -->
+  <script defer src="chengchu-coze-adapter.js"></script>
+  <script>
+    const catalog={
+      cleanser:{kicker:'CLEANSING / 洁面',title:'从温和清洁开始',description:'选择洁面时，可以先看肤感、香味偏好与自己的使用习惯。',products:[['云感氨基酸舒润洁面乳','无香型 · 低泡 · ¥169'],['净澈控油洁面啫喱','清爽洁面方向；详细资料以正式资料为准']]},
+      moisture:{kicker:'MOISTURE / 保湿',title:'给日常留一份滋润',description:'保湿产品是否适合你，需要结合具体产品资料与个人使用感受判断。',products:[['屏护神经酰胺保湿乳','具体成分、规格与价格待品牌资料确认']]},
+      serum:{kicker:'SERUM / 精华',title:'认真对待进阶护理',description:'精华类产品建议先了解使用说明与注意事项，再决定是否加入日常流程。',products:[['焕亮果酸细致精华液','使用说明与注意事项待品牌资料确认']]},
+      travel:{kicker:'TRAVEL / 随行',title:'把熟悉的护理带走',description:'随行分装适合出差与短途旅行场景，具体规格请以正式资料为准。',products:[['随行旅行分装瓶礼盒','内容物、容量与价格待品牌资料确认']]}
+    };
+    const dialog=document.getElementById('product-dialog');
+    document.querySelectorAll('[data-category]').forEach(card=>card.addEventListener('click',()=>{
+      const item=catalog[card.dataset.category];
+      document.getElementById('dialog-kicker').textContent=item.kicker;
+      document.getElementById('dialog-title').textContent=item.title;
+      document.getElementById('dialog-description').textContent=item.description;
+      const list=document.getElementById('dialog-products');list.replaceChildren();
+      item.products.forEach(([name,note])=>{const li=document.createElement('li');const strong=document.createElement('strong');const span=document.createElement('span');strong.textContent=name;span.textContent=note;li.append(strong,span);list.append(li)});
+      dialog.showModal();
+    }));
+    document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+    const menu=document.querySelector('.menu-toggle');const nav=document.getElementById('main-nav');
+    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'收起':'菜单'});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='菜单'}));
+    document.querySelectorAll('.prompt-list [data-prompt]').forEach(button=>button.addEventListener('click',()=>{
+      document.getElementById('guide').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+      document.getElementById('coze-agent-container').dispatchEvent(new CustomEvent('chengchu:ask',{detail:{question:button.dataset.prompt}}));
+    }));
+  </script>
+</body>
+</html>

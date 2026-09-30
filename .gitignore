@@ -1,0 +1,15 @@
+# ============ 本地凭证（含真实 Token / Secret，严禁提交！）============
+.dev.vars
+*.local
+
+# ============ 依赖与构建产物 ============
+node_modules/
+dist/
+.wrangler/
+
+# ============ 系统 / 编辑器文件 ============
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
